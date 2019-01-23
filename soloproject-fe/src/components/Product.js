@@ -1,32 +1,32 @@
 import React from 'react'
-
 import Card from '@material-ui/core/Card'
 import CardActions from '@material-ui/core/CardActions'
 import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
+//import './Product.css';
 
-const GridItem = (props) => {
+const Product = (props) => {
     console.log(props)
     return(
         <div>
-            { props.course ? (
+            { props.product ? (
                 <Card >
                     <CardMedia style={{height: 0, paddingTop: '56.25%'}}
-                    image={props.product.data.Poster}
-                    title={props.product.data.Title}
+                    image={props.product.Poster}
+                    title={props.product.Title}
                     />
                     <CardContent>
                     <Typography gutterBottom variant="headline" component="h2">
-                        {props.product.data.Title}
+                        {props.product.Title}
                     </Typography>
                     <Typography component="p">
-                        {props.product.data.Year}
+                        {props.product.Year}
                     </Typography>
                     </CardContent>
                     <CardActions>
-                    <Button size="small" color="primary" href={props.product.data.Title} target="_blank">
+                    <Button size="small" color="primary" href={props.product.imdbID} target="_blank">
                         Go To Course
                     </Button>
                     </CardActions>
@@ -35,4 +35,4 @@ const GridItem = (props) => {
         </div>
     )
 }
-export default GridItem;
+export default Product;
