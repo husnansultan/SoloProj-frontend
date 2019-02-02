@@ -3,7 +3,7 @@ import axios from 'axios';
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 import Product from '../components/Product'
-//import './ProductGrid.css';
+//import '../components/css/ProductGrid.css';
 
 class ProductGrid extends Component {
 

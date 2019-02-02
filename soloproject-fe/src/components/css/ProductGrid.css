@@ -1,6 +1,6 @@
 TextField {
-    padding: 24 
-    id: searchInput
-    placeholder: 'Search for Food'   
-    margin="normal"
+    padding: 34;
+    id: searchInput;
+    placeholder: 'Search for Food';   
+    margin="normal";
 }
