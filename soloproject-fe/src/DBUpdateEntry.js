@@ -89,7 +89,7 @@ class DBEntryUpdate extends Component {
                 </form>
                 {this.state.submitSuccess ?
                     <div>
-                        <p>You have successfully updated a Greek god.</p>
+                        <p>You have successfully updated a Yer food.</p>
                     </div>
                     : null}
             </div>
