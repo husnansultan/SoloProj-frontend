@@ -50,7 +50,7 @@ class UserUpdateAccount extends Component {
             <div id="MainDiv">
                 <p>
                 </p>
-                <img src="/Banner.png" width="275" height="175" alt="Banner"/>
+                <img src="/Banner.png" width="225" height="125" alt="Banner" />
 
                 <form>
                     <p>Fill out the form and click submit to update account.</p>

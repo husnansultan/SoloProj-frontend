@@ -42,7 +42,7 @@ class DBRemoveEntry extends Component {
                 <div>
                     <p>
                     </p>
-                    <img src="/Banner.png" width="275" height="175" alt="Banner" />
+                    <img src="/Banner.png" width="225" height="125" alt="Banner" />
                     <form>
                         <p>Enter name and click submit to remove a Food. </p>
                         <input type="text" placeholder="Delete your Guilt..." onChange={(this.handleInput)} name="Delete"></input>

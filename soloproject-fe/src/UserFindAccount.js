@@ -44,7 +44,7 @@ class UserFindAccount extends Component {
       <div className="Search" id="MainDiv">
         <p>
         </p>
-        <img src="/Banner.png" width="275" height="175" alt="Banner" />
+       <img src="/Banner.png" width="225" height="125" alt="Banner" />
 
         <form onSubmit={this.retrieveData}>
           <p>Enter User Name: </p>

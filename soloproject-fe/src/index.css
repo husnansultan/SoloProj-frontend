@@ -17,7 +17,7 @@ html {
   text-align: center;
   padding: 45px 20px;
   color: black;
-  font-family: Calibri, Arial, Helvetica, sans-serif;
+  font-family: Calibri, Arial, Helvetica, sans-serif, Aclonica;
 } 
 
 nav ul {
@@ -76,12 +76,19 @@ nav .active {
  .dropdown:hover .dropdown-content {
   display: block;
 }
+input[type=text] {
+  -webkit-transition: width 2.0s ease-in-out;
+  transition: width 2.0s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 100%;
+  border: 3px solid #555;
+}
 
 #MainDiv{
-/*
-    width:100%;
-    position:fixed;
-    top:10%;
-    left:0px;
-*/
+    position: fixed;
+  left: 50%;
+  top: 60%;
+  -webkit-transform: translate(-50%, -50%);
 }

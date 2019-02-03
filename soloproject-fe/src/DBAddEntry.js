@@ -62,7 +62,7 @@ class DBAddEntry extends Component {
             <div id="MainDiv">
                 <p>
                 </p>
-                <img src="/Banner.png" width="275" height="175" alt="Banner" />
+                <img src="/Banner.png" width="225" height="125" alt="Banner" />
 
                 <form>
                     <p>Please Fill out the Form below and get a Grip of Life !! </p>

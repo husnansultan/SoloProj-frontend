@@ -67,7 +67,7 @@ class DBEntryUpdate extends Component {
             <div id="MainDiv">
                 <p>
                 </p>
-                <img src="/Banner.png" width="275" height="175" alt="Banner" />
+                <img src="/Banner.png" width="225" height="125" alt="Banner" />
 
                 <form>
                     <p>Fill out the form if you lied about a Food earlier</p>
