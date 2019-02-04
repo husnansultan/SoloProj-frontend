@@ -26,7 +26,7 @@ class Navbar extends Component {
                                         <li className="dropdown">
                                             <a href="javascript:void(0)" className="dropbtn">User Account</a>
                                             <div className="dropdown-content">
-                                                <Link to="/UserFindAccount">Search</Link>
+                                                <Link style={{ pointerEvents: 'none' }} to="/UserFindAccount">Search</Link>
                                                 <Link to="/UserCreateAccount">Create</Link>
                                                 <Link to="/UserUpdateAccount">Update</Link>
                                                 <Link to="/UserRemoveAccount">Delete</Link>
