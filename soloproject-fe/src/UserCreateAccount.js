@@ -5,18 +5,23 @@ class UserCreateAccount extends Component {
     constructor() {
         super();
         this.state = {
-            username: "",
+            userName: "",
             password: "",
-            submitSuccess: false
+            submitSuccess: false,
+            loginStatus: false
         };
     }
 
-    handleInputUsername = (event) => {
-        this.setState({ username: event.target.value });
+    handleInputUserName = (event) => {
+        this.setState({ userName: event.target.value });
     }
 
     handleInputPassword = (event) => {
         this.setState({ password: event.target.value });
+    }
+    
+    handleInputLoginStatus = (event) => {
+        this.setState({ loginStatus: event.target.value });
     }
 
     createUserAccount = (event) => {
@@ -24,8 +29,9 @@ class UserCreateAccount extends Component {
             method: 'post',
             url: 'http://127.0.0.1:8080/soloproject-be/init-methods/fetchUser/addUser',
             data: {
-                username: this.state.username,
+                userName: this.state.userName,
                 password: this.state.password,
+                loginStatus: this.state.loginStatus
             }
         })
             .then(response => {
@@ -48,11 +54,15 @@ class UserCreateAccount extends Component {
 
                 <form>
                     <p>Fill out the form and click submit to create account. </p>
-                    <input type="text" placeholder="Username" value={this.state.username} onChange={(this.handleInputUsername)}></input>
+                    <input type="text" placeholder="UserName" value={this.state.userName} onChange={(this.handleInputUserName)}></input>
                     <br></br>
                     <input type="password" placeholder="Password" value={this.state.password} onChange={(this.handleInputPassword)}></input>
                     <br></br>
-
+                    <label className="switch">
+                        <input type="checkbox" value={this.state.loginStatus} onChange={(this.handleInputLoginStatus)}/>
+                        <span className="slider round"></span>
+                    </label>
+                    <br></br>
                     <input type="button" value="Submit" onClick={this.createUserAccount}></input>
                 </form>
                 {this.state.submitSuccess ?

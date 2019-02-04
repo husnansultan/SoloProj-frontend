@@ -10,7 +10,6 @@ class DBEntryUpdate extends Component {
             category: "",
             price: "",
             descr: "",
-            image: "",
             submitSuccess: false
         };
     }
@@ -35,10 +34,6 @@ class DBEntryUpdate extends Component {
         this.setState({ descr: event.target.value });
     }
 
-    handleInputImage = (event) => {
-        this.setState({ image: event.target.value });
-    }
-
     updateDBEntry = (event) => {
         axios({
             method: 'put',
@@ -48,7 +43,6 @@ class DBEntryUpdate extends Component {
                 category: this.state.category,
                 price: this.state.price,
                 descr: this.state.descr,
-                image: this.state.image,
             }
         })
             .then(response => {
@@ -83,13 +77,11 @@ class DBEntryUpdate extends Component {
                     <br></br>
                     <input type="text" placeholder="Description" value={this.state.descr} onChange={(this.handleInputDescr)}></input>
                     <br></br>
-                    <input type="text" placeholder="Image" value={this.state.image} onChange={(this.handleInputImage)}></input>
-                    <br></br>
                     <input type="button" value="Submit" onClick={this.updateDBEntry}></input>
                 </form>
                 {this.state.submitSuccess ?
                     <div>
-                        <p>You have successfully updated a Yer food.</p>
+                        <p>You have successfully updated Yer food.</p>
                     </div>
                     : null}
             </div>

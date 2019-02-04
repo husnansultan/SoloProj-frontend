@@ -7,8 +7,9 @@ class UserFindAccount extends Component {
     super();
     this.state = {
       searchInput: "",
-      username: "",
-    password: "",
+      userName: "",
+        password: "",
+        loginStatus: null,
       resultsRetreived: false
     }
     this.handleInput = this.handleInput.bind(this);
@@ -29,6 +30,7 @@ class UserFindAccount extends Component {
       this.setState({
         userName: response.data[0].userName,
         password: response.data[0].password,
+        loginStatus: response.data[0].loginStatus,
         resultsRetreived: true
       })
     })
@@ -49,13 +51,15 @@ class UserFindAccount extends Component {
         <form onSubmit={this.retrieveData}>
           <p>Enter User Name: </p>
           <input id="text" type="text" placeholder="Search..." onChange={(this.handleInput)}></input>
+            <br></br>
           <input type="button" onClick={this.findAccount} value="Search"></input>
         </form>
         <br />
         {this.state.resultsRetreived ?
           <div>
             <h2> User Name: {this.state.userName} </h2>
-            <h2> Password :  </h2>
+            <h2> Password:  {this.state.password}</h2>
+            <h3> Login Status: {this.state.loginStatus}</h3>
             <br />
           </div>
           : null}

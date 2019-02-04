@@ -9,7 +9,6 @@ class DBAddEntry extends Component {
             category: "",
             price: "",
             descr: "",
-            image: "",
             submitSuccess: false
         };
     }
@@ -30,10 +29,6 @@ class DBAddEntry extends Component {
         this.setState({ descr: event.target.value });
     }
 
-    handleInputImage = (event) => {
-        this.setState({ image: event.target.value });
-    }
-
     addDBEntry = (event) => {
         axios({
             method: 'post',
@@ -43,7 +38,6 @@ class DBAddEntry extends Component {
                 category: this.state.category,
                 price: this.state.price,
                 descr: this.state.descr,
-                image: this.state.image,
             }
         })
             .then(response => {
@@ -73,8 +67,6 @@ class DBAddEntry extends Component {
                     <input type="text" placeholder="Price" value={this.state.price} onChange={(this.handleInputPrice)}></input>
                     <br></br>
                     <input type="text" placeholder="Description" value={this.state.descr} onChange={(this.handleInputDescr)}></input>
-                    <br></br>
-                    <input type="text" placeholder="Image" value={this.state.image} onChange={(this.handleInputImage)}></input>
                     <br></br>
                     <input type="button" value="Submit" onClick={this.addDBEntry}></input>
                 </form>
