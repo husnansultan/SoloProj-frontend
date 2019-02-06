@@ -11,7 +11,6 @@ class DBFindEntry extends Component {
         category: "",
         price: "",
         descr: "",
-        image: "",
       resultsRetreived: false
     }
     this.handleInput = this.handleInput.bind(this);
@@ -34,7 +33,6 @@ class DBFindEntry extends Component {
         category: response.data[0].category,
         price: response.data[0].price,
         descr: response.data[0].descr,
-        image: response.data[0].image,
         resultsRetreived: true
       })
     })
@@ -55,6 +53,7 @@ class DBFindEntry extends Component {
         <form onSubmit={this.retrieveData}>
           <p>Enter Food Name: </p>
           <input id="text" type="text" placeholder="Search..." onChange={(this.handleInput)}></input>
+            <br></br>
           <input type="button" onClick={this.findEntry} value="Search"></input>
         </form>
         <br />
@@ -65,7 +64,6 @@ class DBFindEntry extends Component {
             <p> Price : {this.state.price} </p>
             <p> Description : {this.state.descr}</p>
             <br />
-            <img src={this.state.image} alt="Your Food" />
           </div>
           : null}
       </div >

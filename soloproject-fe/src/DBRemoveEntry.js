@@ -46,6 +46,7 @@ class DBRemoveEntry extends Component {
                     <form>
                         <p>Enter name and click submit to remove a Food. </p>
                         <input type="text" placeholder="Delete your Guilt..." onChange={(this.handleInput)} name="Delete"></input>
+                        <br></br>
                         <input type="button" value="Submit" onClick={this.removeEntry}></input>
                     </form>
                     {this.state.submitSuccess ?
