@@ -27,7 +27,7 @@ class UserUpdateAccount extends Component {
     updateAccount = (event) => {
         axios({
             method: 'put',
-            url: 'http://127.0.0.1:8081/soloproject-be/init-methods/updateUser/' + this.state.updateInput,
+            url: 'http://127.0.0.1:8082/soloproject-be/init-methods/updateUser/' + this.state.updateInput,
             data: {
                 userName: this.state.userName,
                 password: this.state.password,
