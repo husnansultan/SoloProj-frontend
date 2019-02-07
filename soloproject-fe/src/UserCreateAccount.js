@@ -52,7 +52,6 @@ class UserCreateAccount extends Component {
                     <br></br>
                     <input type="password" placeholder="Password" value={this.state.password} onChange={(this.handleInputPassword)}></input>
                     <br></br>
-
                     <input type="button" value="Submit" onClick={this.createUserAccount}></input>
                 </form>
                 {this.state.submitSuccess ?

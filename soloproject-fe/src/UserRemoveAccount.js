@@ -47,6 +47,7 @@ class UserRemoveAccount extends Component {
                     <form>
                         <p>Enter name and click submit to delete your account.</p>
                         <input type="text" placeholder="Delete Account" onChange={(this.handleInput)} name="Delete"></input>
+                        <br></br>
                         <input type="button" value="Submit" onClick={this.deleteAccount}></input>
                     </form>
                     {this.state.submitSuccess ?
