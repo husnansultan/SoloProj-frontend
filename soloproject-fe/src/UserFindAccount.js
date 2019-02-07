@@ -23,7 +23,7 @@ class UserFindAccount extends Component {
   findAccount = (event) => {
     axios({
       method: 'get',
-      url: 'http://127.0.0.1:8080/soloproject-be/init-methods/fetchUsers/getUser/' + this.state.searchInput,
+      url: 'http://127.0.0.1:8081/soloproject-be/init-methods/fetchUsers/getUser/' + this.state.searchInput,
       responseType: 'json'
     }).then(response => {
       this.setState({

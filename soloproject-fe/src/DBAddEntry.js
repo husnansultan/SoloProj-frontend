@@ -32,7 +32,7 @@ class DBAddEntry extends Component {
     addDBEntry = (event) => {
         axios({
             method: 'post',
-            url: 'http://127.0.0.1:8080/soloproject-be/init-methods/fetch/addDBEntry/',
+            url: 'http://127.0.0.1:8081/soloproject-be/init-methods/fetch/addDBEntry/',
             data: {
                 foodName: this.state.foodName,
                 category: this.state.category,

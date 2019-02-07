@@ -37,7 +37,7 @@ class DBEntryUpdate extends Component {
     updateDBEntry = (event) => {
         axios({
             method: 'put',
-            url: 'http://127.0.0.1:8080/soloproject-be/init-methods/fetch/updateDBEntry/' + this.state.updateInput,
+            url: 'http://127.0.0.1:8081/soloproject-be/init-methods/fetch/updateDBEntry/' + this.state.updateInput,
             data: {
                 foodName: this.state.foodName,
                 category: this.state.category,
