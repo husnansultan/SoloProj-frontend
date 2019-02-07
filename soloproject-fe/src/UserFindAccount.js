@@ -7,8 +7,8 @@ class UserFindAccount extends Component {
     super();
     this.state = {
       searchInput: "",
-      username: "",
-    password: "",
+      userName: "",
+      password: "",
       resultsRetreived: false
     }
     this.handleInput = this.handleInput.bind(this);
