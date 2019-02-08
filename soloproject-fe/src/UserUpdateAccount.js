@@ -16,7 +16,7 @@ class UserUpdateAccount extends Component {
         this.setState({ updateInput: event.target.value });
     }
 
-    handleInputUsername = (event) => {
+    handleInputUserName = (event) => {
         this.setState({ userName: event.target.value });
     }
 
@@ -58,7 +58,7 @@ class UserUpdateAccount extends Component {
                     <input type="text" placeholder="Username" value={this.state.updateInput} onChange={(this.handleInputUpdateInput)}></input>
                     <br></br>
                     <p>Enter the details you wish to change:</p>
-                    <input type="text" placeholder="Username" value={this.state.userName} onChange={(this.handleInputUsername)}></input>
+                    <input type="text" placeholder="Username" value={this.state.userName} onChange={(this.handleInputUserName)}></input>
                     <br></br>
                     <input type="password" placeholder="Password" value={this.state.password} onChange={(this.handleInputPassword)}></input>
                     <br></br>
