@@ -19,7 +19,7 @@ class UserRemoveAccount extends Component {
     deleteAccount = (event) => {
         axios({
             method: 'delete',
-            url: 'http://127.0.0.1:8080/soloproject-be/init-methods/fetchUser/removeUser/' + this.state.userName,
+            url: 'http://foodapp.uksouth.cloudapp.azure.com:8080/soloproject-be/init-methods/fetchUser/removeUser/' + this.state.userName,
             responseType: 'json',
             data: {
                 userName: this.state.userName
