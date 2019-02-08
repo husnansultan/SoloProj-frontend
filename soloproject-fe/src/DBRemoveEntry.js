@@ -20,7 +20,7 @@ class DBRemoveEntry extends Component {
     removeEntry = (event) => {
         axios({
             method: 'delete',
-            url: 'http://127.0.0.1:8082/soloproject-be/init-methods/fetch/removeDBEntry/' + this.state.foodName,
+            url: 'http://127.0.0.1:8080/soloproject-be/init-methods/fetch/removeDBEntry/' + this.state.foodName,
             data: {
                 foodName: this.state.foodName
             }

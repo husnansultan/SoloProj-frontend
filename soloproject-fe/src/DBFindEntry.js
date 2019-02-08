@@ -25,7 +25,7 @@ class DBFindEntry extends Component {
   findEntry = (event) => {
     axios({
       method: 'get',
-      url: 'http://127.0.0.1:8082/soloproject-be/init-methods/fetch/getDBEntry/' + this.state.searchInput,
+      url: 'http://127.0.0.1:8080/soloproject-be/init-methods/fetch/getDBEntry/' + this.state.searchInput,
       responseType: 'json'
     }).then(response => {
       this.setState({
